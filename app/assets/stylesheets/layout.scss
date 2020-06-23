@@ -1,0 +1,138 @@
+/* HTML5 reset */
+
+article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section {
+  display:block;
+}
+
+mark {
+  background-color:#ff9;
+  color:#000;
+  font-style:italic;
+  font-weight:bold;
+}
+
+/* end HTML5 reset */
+
+/* reset */
+body, p, h1, h2, h3, h4, h5, h6, ul, li, form {
+  margin: 0;
+  padding: 0;
+  line-height: 18px;
+}
+p, h2, h3, h4, h5, h6 {
+  margin-bottom: 18px;
+}
+/* end reset */
+
+/* font stacks */
+body {
+    font-family: Baskerville, 'Times New Roman', Times, serif;
+}
+h1, h2, h3, h4, h5 {
+  font-family: Georgia, Times, 'Times New Roman', serif;
+}
+/* end font stacks */
+
+body {
+  width: 900px;
+  margin: 0px auto;
+  background-color: white;
+}
+
+nav {
+  li {
+    list-style: none;
+  }
+}
+
+header {
+  height: 108px;
+  width: 100%;
+
+  background-color: #eee;
+  border: 1px solid #ccc;
+
+  h1 {
+    font-size: 32px;
+    padding: 18px 18px 0px 18px;
+  }
+  p {
+    font-size: small;
+    padding-left: 36px;
+  }
+  ul {
+    margin-top: 36px;
+    width: 594px;
+  }
+  li {
+    float: left;
+    display: inline;
+    width: 145px;
+    text-align: center;
+    height: 25%;
+    a {
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+  }
+  li.selected {
+  }
+  li:last-child { border-right: none; }
+}
+
+#main {
+  border: 1px solid #ccc;
+  margin-top: 9px;
+  margin-bottom: 9px;
+  width: 863px;
+  padding: 18px;
+  display: block;
+  a, a:link, a:visited, a:active {
+    text-decoration: none;
+    font-weight: bold;
+  }
+  a:hover {
+    text-decoration: underline;
+  }
+  div.field_with_errors input {
+    background-color: #ffa;
+    border: 1px solid red;
+  }
+  ul {
+    width: 70%;
+    margin-left: 129px;
+  }
+  li {
+    list-style: none;
+    padding: 3px;
+    border-radius: 5px;
+    margin: 3px 3px 12px 3px;
+    span { float:right; }
+  }
+  li.done {
+    a { color: red; }
+    text-decoration: line-through;
+  }
+  a#clearer { float: right; }
+  h1 {
+    margin-bottom: 18px;
+  }
+  h2 {
+    margin: 9px;
+    text-align: center;
+  }
+  #notice {
+    background-color: #ffa;
+    text-align: center;
+  }
+}
+
+footer {
+  height: 36px;
+  width: 100%;
+  text-align: center;
+  clear: both;
+  p { margin-bottom: 0; }
+}

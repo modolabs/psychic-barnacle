@@ -8,8 +8,23 @@
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
-
   <body>
-    <%= yield %>
+    <header>
+      <h1>Todo app</h1>
+      <nav>
+        <ul>
+          <li><%= link_to 'Projects', projects_path %></li>
+        </ul>
+      </nav>
+    </header>
+
+    <div id="main">
+      <p id="notice"><%= notice %></p>
+      <%= yield %>
+    </div>
+
+    <footer>
+      <p>2020</p>
+    </footer>
   </body>
 </html>
