@@ -1,0 +1,19 @@
+<ul>
+  <% if @project.items.empty? %>
+  <li>No items.</li>
+  <% end %>
+<% @project.items.each do |item| %>
+  <li class="<%= "#{item.done? ? 'done' : 'not-done'}" %>">
+    <%= link_to item.action, edit_project_item_path(@project, item) %>
+    <% unless item.done? %>
+      <%= button_to 'Done',
+            { :controller => :items, :action => :update,
+              :id => item.id, :project_id => @project.id,
+              :item => { :done => true } },
+            { :method => :patch } %>
+    <% end %>
+  </li>
+<% end %>
+</ul>
+
+<%= link_to 'New Item', new_project_path(project) %>

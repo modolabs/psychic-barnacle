@@ -1,0 +1,29 @@
+<h2>Edit Item</h2>
+<%= form_for([@project, @item], :url => { :action => :update }) do |f| %>
+  <% if @item.errors.any? %>
+    <div id="error_explanation">
+      <h2>
+        <%= pluralize(@item.errors.count, "error") %>
+        prohibited this project from being saved:
+      </h2>
+
+      <ul>
+      <% @item.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :action %><br>
+    <%= f.text_field :action, :size => "80" %>
+  </div>
+  <div class="field">
+    <%= f.label :done, 'Done?' %>
+    <%= f.check_box :done %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
