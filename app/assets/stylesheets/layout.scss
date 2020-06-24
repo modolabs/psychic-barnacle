@@ -67,8 +67,8 @@ header {
   li {
     float: left;
     display: inline;
-    width: 145px;
-    text-align: center;
+    min-width: 145px;
+    padding-left: 18px;
     height: 25%;
     a {
       text-decoration: none;

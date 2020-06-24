@@ -13,7 +13,7 @@
       <h1>Todo app</h1>
       <nav>
         <ul>
-          <li><%= link_to 'Projects', projects_path %></li>
+          <li><%= link_to 'Projects', projects_path %><% if @project %>&nbsp;/&nbsp;<%= @project.title %><% end %></li>
         </ul>
       </nav>
     </header>
