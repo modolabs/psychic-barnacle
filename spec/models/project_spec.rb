@@ -20,5 +20,15 @@ RSpec.describe Project do
       expect(subject).to_not be_valid
       expect(subject.errors.keys).to eq [:title]
     end
+
+    it "requires a unique title" do
+      duplicate_title = 'My Chores'
+
+      Project.create(title: duplicate_title)
+      project = Project.new(title: duplicate_title)
+
+      expect(project).to_not be_valid
+      expect(project.errors.keys).to eq [:title]
+    end
   end
 end
