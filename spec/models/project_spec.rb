@@ -30,5 +30,9 @@ RSpec.describe Project do
       expect(project).to_not be_valid
       expect(project.errors.keys).to eq [:title]
     end
+
+    it "has a default deletion state" do
+      expect(subject.deleted).to be_falsey
+    end
   end
 end
