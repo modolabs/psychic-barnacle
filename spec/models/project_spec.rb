@@ -20,5 +20,12 @@ RSpec.describe Project do
       expect(subject).to_not be_valid
       expect(subject.errors.keys).to eq [:title]
     end
+
+    it 'title must be unique' do
+      project1 = create(:project)
+      not_unique_project = build(:project, title: project1.title)
+
+      expect(not_unique_project.valid?).to be false
+    end
   end
 end

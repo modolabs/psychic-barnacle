@@ -8,7 +8,7 @@
 <li>
   <%= link_to project.title,  project_path(project) %>
   <span>
-    <%= link_to 'Destroy', project,
+    <%= button_to 'Destroy', project,
                 method: :delete, data: { confirm: 'Are you sure?' } %>
   </span>
 </li>
