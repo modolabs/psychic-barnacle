@@ -18,11 +18,11 @@ class ItemsController < ApplicationController
   end
 
   def edit
-    @item = @project.items.find(params[:id])
+    @item = @project.items.find_by("id=#{params[:id]}")
   end
 
   def update
-    @item = @project.items.find(params[:id])
+    @item = @project.items.find_by("id=#{params[:id]}")
 
     if @item.update(item_params)
       redirect_to project_path(@project),
